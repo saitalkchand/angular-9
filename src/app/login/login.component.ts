@@ -18,8 +18,6 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    window.localStorage.setItem('token', 'sample token');
-    this.router.navigate(['list-user']);
     const loginPayload = {
       username: this.loginForm.controls.username.value,
       password: this.loginForm.controls.password.value
